@@ -73,9 +73,9 @@ SECTION 6: STRUCTURED CLUSTER PROFILES & CHRONOLOGICAL READING PATH
 
 SECTION 7: KEYWORD THEMATIC CATEGORIZATION & CITATION BURSTS
 - What it shows: 
-  * Thematic Keyword Tiers: Groups extracted domain terminology into functional categories 
-    (Material & Synthesis, Sensing Mechanisms & Techniques, Sensing Platforms & Devices, 
-    Characterization & Detection, and Environmental & Thermal Applications).
+ * Thematic Keyword Tiers: Groups extracted discipline terminology dynamically into universal functional categories 
+    (Core Concepts & Theory, Methods & Techniques, Platforms & Systems, 
+    Characterization & Evaluation, and Applications & Impacts).
   * Keyword Citation Bursts: Identifies terms experiencing intense citation surges.
   * Reference Citation Bursts: Tracks landmark publications experiencing sudden spikes in citation activity based on Kleinberg burst detection algorithms.
 - How to interpret: 
