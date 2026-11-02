@@ -8,10 +8,7 @@ Developed by Dr. Nibu A. George, Baselius College Kottayam (Autonomous)
 --------------------------------------------------------------------------------
 NAGraph is a specialized, publication-grade Python-based bibliometric and network 
 analysis suite designed to bridge classical structural depth with 
-high-throughput bibliographic fetching via OpenAlex. Optimized specifically for 
-optical physics, laser physics, and photothermal spectroscopy (such as laser-induced 
-thermal lens and photothermal spectroscopy research), NAGraph eliminates cross-disciplinary 
-noise and generates rigorous, sectionalized Word (.docx) reports.
+high-throughput bibliographic fetching via OpenAlex. Optimized for any academic discipline or research domain, NAGraph dynamically extracts bibliographic trends, thematic clusters, and citation patterns to generate rigorous, sectionalized Word (.docx) reports for any scientific query.
 
 This manual provides an exhaustive, section-by-section interpretation guide for 
 every table, figure, metric, and analytical artifact contained in the generated 
