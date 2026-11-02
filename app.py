@@ -68,7 +68,7 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("📖 User Guide & Manual")
 
 try:
-    with open("NAGraph_User_Manual.docx", "rb") as docx_file:
+    with open("nagraph user manual.docx", "rb") as docx_file:
         st.sidebar.download_button(
             label="📥 Download Help Manual (.docx)",
             data=docx_file,
@@ -77,7 +77,7 @@ try:
             use_container_width=True,
         )                                                          # ← closes download_button
 except FileNotFoundError:
-    st.sidebar.warning("`NAGraph_User_Manual.docx` not found in directory."))   # ← EXTRA ')'
+    st.sidebar.warning("`nagraph user manual.docx` not found in directory."))   # ← EXTRA ')'
 
 st.sidebar.markdown("---")
 
