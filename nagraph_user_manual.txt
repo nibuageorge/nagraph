@@ -1,5 +1,5 @@
 ================================================================================
-NAGRAPH: ULTIMATE SCIENTOMETRIC & NETWORK ANALYSIS SUITE
+NAGRAPH: SCIENTOMETRIC & NETWORK ANALYSIS SUITE
 Official User Manual & Report Interpretation Guide
 Developed by Dr. Nibu A. George, Baselius College Kottayam (Autonomous)
 ================================================================================
@@ -7,7 +7,7 @@ Developed by Dr. Nibu A. George, Baselius College Kottayam (Autonomous)
 1. INTRODUCTION & PURPOSE OF NAGRAPH
 --------------------------------------------------------------------------------
 NAGraph is a specialized, publication-grade Python-based bibliometric and network 
-analysis suite designed to bridge classical CiteSpace structural depth with 
+analysis suite designed to bridge classical structural depth with 
 high-throughput bibliographic fetching via OpenAlex. Optimized specifically for 
 optical physics, laser physics, and photothermal spectroscopy (such as laser-induced 
 thermal lens and photothermal spectroscopy research), NAGraph eliminates cross-disciplinary 
@@ -67,11 +67,12 @@ SECTION 6: STRUCTURED CLUSTER PROFILES & CHRONOLOGICAL READING PATH
 - What it shows: 
   * Structured Cluster Profiles Table: Major thematic research fronts derived from network 
     clustering, detailing Cluster ID, LLR Label, Size, extracted Key Terms, Active Years, 
-    and the Leading Work.
+    and the Leading Work. Accompanied by Silhouette Scores measuring cluster cohesion.
   * Chronological Reading Path: A syllabus-style table sorting foundational core papers 
     strictly from oldest to newest to guide researchers through the evolution of the field.
-- How to interpret: Offers instant thematic identification and historical context for 
-  every sub-specialty within optical physics.
+- How to interpret: 
+  * Interpreting Silhouette Scores: Values range from 0 to 1. A score above 0.7 (e.g., 0.86) indicates a highly cohesive, tightly bound research front where grouped papers share strong internal citation and conceptual ties. Scores closer to 0 imply overlapping or loosely defined sub-topics.
+  * Reading Path: Serves as a step-by-step pedagogical syllabus for mastering the historical progression of the domain.
 
 SECTION 7: KEYWORD THEMATIC CATEGORIZATION & CITATION BURSTS
 - What it shows: 
@@ -80,8 +81,8 @@ SECTION 7: KEYWORD THEMATIC CATEGORIZATION & CITATION BURSTS
     Characterization & Detection, and Environmental & Thermal Applications).
   * Keyword Citation Bursts: Identifies terms experiencing intense citation surges.
   * Reference Citation Bursts: Tracks landmark publications experiencing sudden spikes in citation activity based on Kleinberg burst detection algorithms.
-- How to interpret: Maps both conceptual vocabulary tiers and temporal acceleration points 
-  driving active research fronts.
+- How to interpret: 
+  * Interpreting Burst Strength: This measures the intensity and suddenness of a citation or keyword surge over baseline activity. A high burst strength means a topic or reference went from relative obscurity to a massive wave of active interest during those specific begin/end years, signaling a shifting paradigm or hot new sub-field.
 
 SECTION 8: AUTHOR PRODUCTIVITY & TRUE AUTHOR CO-CITATION ANALYSIS (ACA)
 - What it shows: 
@@ -102,8 +103,9 @@ SECTION 10: JOURNAL CO-CITATION ANALYSIS & SOURCE DISTRIBUTION
 SECTION 11 & APPENDIX: PAPER ROLES & NODE INTERCONNECTIVITY TRACKING
 - What it shows: 
   * Paper Roles: Tags foundational, review/hub, bridge, and recent influential works.
-  * Node Interconnectivity & Citation Flow Tracking Table (Node Table): Explicitly maps incoming ("Cited By Nodes") and outgoing ("Cites Nodes") citation linkages for top-ranked network nodes.
-- How to interpret: Provides complete mathematical auditability and provenance traceability for network connectivity.
+  * Node Interconnectivity & Citation Flow Tracking Table (Node Table): Explicitly maps incoming and outgoing citation linkages for top-ranked network nodes.
+- How to interpret: 
+  * How to read the Node Interconnectivity Table: The numbers listed under the "Cited By Nodes" and "Cites Nodes" columns correspond directly to the **Rank (#)** of other connected papers within the network. This allows you to trace immediate intellectual lineage—seeing precisely which core papers built upon a foundational study or which works a specific review paper references.
 
 ---
 
@@ -111,17 +113,13 @@ SECTION 11 & APPENDIX: PAPER ROLES & NODE INTERCONNECTIVITY TRACKING
 --------------------------------------------------------------------------------
 - PageRank: A link-analysis algorithm measuring structural importance by evaluating incoming citations.
 
-- In-Network Citations: Citations received strictly from publications inside the assembled network.
+- In-Network Citations: Citations received strictly from publications inside the assembled network. High in-network citations show specific foundational importance to this specific topic.
 
-- Global Citations: Total cumulative citation count from OpenAlex reflecting broad scholarly recognition.
+- Global Citations: Total cumulative citation count from OpenAlex reflecting broad scholarly recognition across the entire scientific world.
 
-- Betweenness Centrality: Quantifies how often a paper falls on the shortest path between other nodes.
+- Betweenness Centrality: Quantifies how often a paper falls on the shortest path between other nodes, identifying critical intellectual bridges.
 
-- Modularity (Q): Strength of division of a network into clusters.
+- Modularity (Q): Strength of division of a network into distinct clusters or community structures.
 
-- Silhouette Ratio: Validation metric assessing cluster similarity and cohesion.
-
--How to read the Node Interconnectivity Table: A brief sentence explaining that numbers in the Cited By and  Cites columns refer to the node ranks of connected papers within the network.
-
--The distinction between Global and In-Network citations: Emphasizing that high global citations show general scientific impact across the world, while high in-network citations show specific foundational importance to this specific topic.
+- Silhouette Ratio: Validation metric assessing cluster similarity, tightness, and internal cohesion.
 ================================================================================
