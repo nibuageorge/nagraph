@@ -75,9 +75,9 @@ try:
             file_name="NAGraph_User_Manual.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             use_container_width=True,
-        )
+        )                                                          # ← closes download_button
 except FileNotFoundError:
-    st.sidebar.warning("`NAGraph_User_Manual.docx` not found in directory."))
+    st.sidebar.warning("`NAGraph_User_Manual.docx` not found in directory."))   # ← EXTRA ')'
 
 st.sidebar.markdown("---")
 
