@@ -63,20 +63,21 @@ st.sidebar.markdown(
     unsafe_allow_html=True,
 )
 
-# --- DOWNLOAD USER MANUAL IN SIDEBAR ---
+# --- DOWNLOAD USER MANUAL IN SIDEBAR (DOCX) ---
 st.sidebar.markdown("---")
 st.sidebar.subheader("📖 User Guide & Manual")
 
 try:
-    with open("nagraph_user_manual.txt", "rb") as manual_file:
+    with open("NAGraph_User_Manual.docx", "rb") as docx_file:
         st.sidebar.download_button(
-            label="📥 Download Help Manual (.txt)",
-            data=manual_file,
-            file_name="NAGraph_User_Manual.txt",
-            mime="text/plain"
+            label="📥 Download Help Manual (.docx)",
+            data=docx_file,
+            file_name="NAGraph_User_Manual.docx",
+            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            use_container_width=True,
         )
 except FileNotFoundError:
-    st.sidebar.warning("`nagraph_user_manual.txt` not found in directory.")
+    st.sidebar.warning("`NAGraph_User_Manual.docx` not found in directory."))
 
 st.sidebar.markdown("---")
 
