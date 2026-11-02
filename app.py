@@ -72,7 +72,7 @@ try:
         st.sidebar.download_button(
             label="📥 Download Help Manual (.docx)",
             data=docx_file,
-            file_name="NAGraph_User_Manual.docx",
+            file_name="nagraph user manual.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             use_container_width=True,
         )                                                          # ← closes download_button
