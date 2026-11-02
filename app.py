@@ -706,6 +706,7 @@ if st.sidebar.button("Run analysis"):
                     plt.tight_layout()
                     st.pyplot(fig_timeline)
                     st.session_state["fig_timeline"] = fig_timeline
+                    st.session_state["timeline_data"] = timeline_data  # <--- ADD THIS LINE
                     st.dataframe(slices_df)
 
                     # 3. Thematic Cluster Analysis & Mapping
