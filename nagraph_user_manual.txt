@@ -48,13 +48,14 @@ SECTION 3: TOPIC OVERVIEW (EXTRACTIVE SUMMARY)
 SECTION 4: NETWORK STATISTICS & DOCUMENT CITATION NETWORK MAP (FIGURE 1)
 - What it shows: 
   * Network Statistics Summary Card: Quantifies total analyzed works (nodes), citation 
-    linkages (edges), thematic clusters, unconnected works, and core global topological 
-    indices: **Global Modularity ($Q$)** and **Weighted Mean Silhouette Score**.
-  * Document Citation Network Map (Figure 1): A directed spring-layout graph visualizing 
-    citation flow among the retrieved corpus.
+    linkages (edges), thematic clusters, global modularity (Q), weighted mean silhouette score, and unconnected works (nodes with no interior links).
+  * Document Citation Network Map (Figure 1): A directed spring-layout graph visualizing citation flow among the retrieved corpus.
 - How to interpret: 
-  * Modularity ($Q$) measures the strength of division of a network into distinct communities (values > 0.5 indicate clear modular structure).
-  * The Weighted Mean Silhouette score evaluates cluster homogeneity and cohesion.
+  * Nodes (Blue Dots): Each individual dot represents a single research publication included in the network slice.
+  * Edges (Arrows): The lines and arrows pointing between nodes represent citation linkages (pointing from a citing paper to the work it references).
+  * Core vs. Periphery (Dense Center vs. Isolated Outer Ring):
+    - The Dense Central Core: The cluster of overlapping lines and closely grouped nodes in the middle indicates heavily interconnected foundational research. Papers here share multiple citations, forming the core intellectual hubs and active research fronts of the domain.
+    - The Peripheral Ring: The dots scattered around the outer boundary with few or no visible connecting lines represent standalone, niche, or isolated publications. Nodes with no interior links represent peripheral, emerging, or specialized studies that do not directly cite other papers within the immediate retrieved dataset.
 
 SECTION 5: HISTORICAL TIMELINE SLICING & CORPUS EVOLUTION
 - What it shows: Groups corpus publications and cumulative citation impact across 
