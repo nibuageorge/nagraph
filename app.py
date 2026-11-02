@@ -973,7 +973,7 @@ if "scored_works" in st.session_state and st.session_state["scored_works"]:
             "Network Statistics Cards, Cluster Silhouette Tables, Domain Keyword Centrality & Bursts, One-Hop Reference Expansion, "
             "Recent-Work Boost, Multi-Metric Importance Scoring, Paper Role Classification, ACA with Active Spans, "
             "Institutional/Country Mapping with Centralities, Journal Co-Citation with Impact Factors, and Complete Node Inventories.\n"
-            "Developed by Dr. Nibu A. George, Baselius College Kottayam."
+            "Developed by Dr. Nibu A. George, Baselius College Kottayam (Autonomous)."
         )
 
         # Section 1: Search Parameters Table
