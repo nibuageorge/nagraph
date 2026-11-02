@@ -1,0 +1,126 @@
+================================================================================
+NAGRAPH: ULTIMATE SCIENTOMETRIC & NETWORK ANALYSIS SUITE
+Official User Manual & Report Interpretation Guide
+Developed by Dr. Nibu A. George, Baselius College Kottayam (Autonomous)
+================================================================================
+
+1. INTRODUCTION & PURPOSE OF NAGRAPH
+--------------------------------------------------------------------------------
+NAGraph is a specialized, publication-grade Python-based bibliometric and network 
+analysis suite designed to bridge classical CiteSpace structural depth with 
+high-throughput bibliographic fetching via OpenAlex. Optimized specifically for 
+optical physics, laser physics, and photothermal spectroscopy (such as laser-induced 
+thermal lens and photothermal spectroscopy research), NAGraph eliminates cross-disciplinary 
+noise and generates rigorous, sectionalized Word (.docx) reports.
+
+This manual provides an exhaustive, section-by-section interpretation guide for 
+every table, figure, metric, and analytical artifact contained in the generated 
+NAGraph Research Report.
+
+---
+
+2. SECTION-BY-SECTION REPORT INTERPRETATION GUIDE
+
+SECTION 1: SEARCH PARAMETERS
+- What it shows: Displays a structured audit table containing the exact search keywords, 
+  matching mode ("any" vs. "all"), publication year range (e.g., 2008–2026), 
+  retrieval sorting criteria (relevance, cited count, or date), one-hop reference 
+  expansion status, recent-work boost status, and the primary data source (OpenAlex).
+- How to interpret: Ensures absolute transparency, provenance tracking, and 
+  methodological reproducibility for your literature search and corpus assembly.
+
+SECTION 2: DATA COVERAGE & NODE CAP DISCLOSURE
+- What it shows: Details the exact quantitative breakdown of corpus construction: 
+  how many base records were retrieved, how many recent articles were added via 
+  the recent-work boost, and how many cited references were incorporated via 
+  one-hop expansion. It also reports the Node Cap disclosure (e.g., total candidate 
+  pool versus the enforced network ceiling of 300 nodes).
+- How to interpret: Evaluates dataset comprehensiveness and explains how lower-priority 
+  outliers were filtered out before network mapping.
+
+SECTION 3: TOPIC OVERVIEW (EXTRACTIVE SUMMARY)
+- What it shows: A high-level qualitative overview generated via extractive sentence ranking 
+  across the corpus. It outlines total analyzed works, citation linkages, publication 
+  windows, and explicitly identifies the highest-ranked flagship publication.
+- How to interpret: Provides an immediate narrative summary of the core research domain's 
+  breadth and highlights its most pivotal foundational study.
+
+SECTION 4: NETWORK STATISTICS & DOCUMENT CITATION NETWORK MAP (FIGURE 1)
+- What it shows: 
+  * Network Statistics Summary Card: Quantifies total analyzed works (nodes), citation 
+    linkages (edges), thematic clusters, unconnected works, and core global topological 
+    indices: **Global Modularity ($Q$)** and **Weighted Mean Silhouette Score**.
+  * Document Citation Network Map (Figure 1): A directed spring-layout graph visualizing 
+    citation flow among the retrieved corpus.
+- How to interpret: 
+  * Modularity ($Q$) measures the strength of division of a network into distinct communities (values > 0.5 indicate clear modular structure).
+  * The Weighted Mean Silhouette score evaluates cluster homogeneity and cohesion.
+
+SECTION 5: HISTORICAL TIMELINE SLICING & CORPUS EVOLUTION
+- What it shows: Groups corpus publications and cumulative citation impact across 
+  customizable multi-year temporal windows (e.g., 4-year slices from 2008 to 2027).
+- How to interpret: Illustrates the chronological maturation of the field, revealing 
+  historical periods of rapid academic growth and surge versus phases of consolidation.
+
+SECTION 6: STRUCTURED CLUSTER PROFILES & CHRONOLOGICAL READING PATH
+- What it shows: 
+  * Structured Cluster Profiles Table: Major thematic research fronts derived from network 
+    clustering, detailing Cluster ID, LLR Label, Size, extracted Key Terms, Active Years, 
+    and the Leading Work.
+  * Chronological Reading Path: A syllabus-style table sorting foundational core papers 
+    strictly from oldest to newest to guide researchers through the evolution of the field.
+- How to interpret: Offers instant thematic identification and historical context for 
+  every sub-specialty within optical physics.
+
+SECTION 7: KEYWORD THEMATIC CATEGORIZATION & CITATION BURSTS
+- What it shows: 
+  * Thematic Keyword Tiers: Groups extracted domain terminology into functional categories 
+    (Material & Synthesis, Sensing Mechanisms & Techniques, Sensing Platforms & Devices, 
+    Characterization & Detection, and Environmental & Thermal Applications).
+  * Keyword Citation Bursts: Identifies terms experiencing intense citation surges.
+  * Reference Citation Bursts: Tracks landmark publications experiencing sudden spikes in citation activity based on Kleinberg burst detection algorithms.
+- How to interpret: Maps both conceptual vocabulary tiers and temporal acceleration points 
+  driving active research fronts.
+
+SECTION 8: AUTHOR PRODUCTIVITY & TRUE AUTHOR CO-CITATION ANALYSIS (ACA)
+- What it shows: 
+  * Author Productivity Table: Ranks contributing authors by productivity, scores, and active spans.
+  * True Author Co-Citation Analysis (ACA) Table: Maps foundational scholars whose works are co-cited across corpus reference lists, detailing co-citation counts and centrality.
+- How to interpret: Separates direct author publication counts from true co-citation network structures.
+
+SECTION 9: INSTITUTIONAL & COUNTRY COLLABORATION DISTRIBUTION
+- What it shows: Geographic and organizational publication output, collaboration network 
+  centralities, and temporal mean publication years for top institutions and country codes.
+- How to interpret: Pinpoints global research hubs and international collaboration trends.
+
+SECTION 10: JOURNAL CO-CITATION ANALYSIS & SOURCE DISTRIBUTION
+- What it shows: Core publishing venues ranked by article volume, network centrality, 
+  and representative Impact Factors.
+- How to interpret: Identifies primary peer-reviewed dissemination channels shaping the domain.
+
+SECTION 11 & APPENDIX: PAPER ROLES & NODE INTERCONNECTIVITY TRACKING
+- What it shows: 
+  * Paper Roles: Tags foundational, review/hub, bridge, and recent influential works.
+  * Node Interconnectivity & Citation Flow Tracking Table (Node Table): Explicitly maps incoming ("Cited By Nodes") and outgoing ("Cites Nodes") citation linkages for top-ranked network nodes.
+- How to interpret: Provides complete mathematical auditability and provenance traceability for network connectivity.
+
+---
+
+3. DETAILED METHODOLOGICAL GLOSSARY
+--------------------------------------------------------------------------------
+- PageRank: A link-analysis algorithm measuring structural importance by evaluating incoming citations.
+
+- In-Network Citations: Citations received strictly from publications inside the assembled network.
+
+- Global Citations: Total cumulative citation count from OpenAlex reflecting broad scholarly recognition.
+
+- Betweenness Centrality: Quantifies how often a paper falls on the shortest path between other nodes.
+
+- Modularity (Q): Strength of division of a network into clusters.
+
+- Silhouette Ratio: Validation metric assessing cluster similarity and cohesion.
+
+-How to read the Node Interconnectivity Table: A brief sentence explaining that numbers in the Cited By and  Cites columns refer to the node ranks of connected papers within the network.
+
+-The distinction between Global and In-Network citations: Emphasizing that high global citations show general scientific impact across the world, while high in-network citations show specific foundational importance to this specific topic.
+================================================================================
