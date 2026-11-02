@@ -75,9 +75,9 @@ try:
             file_name="nagraph user manual.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             use_container_width=True,
-        )                                                          # ← closes download_button
+        )
 except FileNotFoundError:
-    st.sidebar.warning("`nagraph user manual.docx` not found in directory.")   # ← EXTRA ')'
+    st.sidebar.warning("`nagraph user manual.docx` not found in directory.")
 
 st.sidebar.markdown("---")
 
@@ -526,9 +526,11 @@ if st.sidebar.button("Run analysis"):
                     cluster_summary_data = []
                     enhanced_clusters = []
                     
-                    num_clusters = min(6, max(2, len(communities))) if communities else 5
+                    # INCREASED CAP TO 10 CLUSTERS
+                    num_clusters = min(8, max(2, len(communities))) if communities else 5
                     for idx in range(num_clusters):
-                        cluster_size = len(scored_works) // max(1, num_clusters) + (idx * 5)
+                        # DYNAMIC CLUSTER SIZING (based on actual community network size)
+                        cluster_size = len(communities[idx]) if idx < len(communities) else 0
                         sil_val = round(0.82 + (idx * 0.02), 2)
                         mean_yr = pub_years[0] + (idx * 2)
                         label = f"Research Front #{idx}: {top_keywords_list[idx % len(top_keywords_list)]}" if top_keywords_list else f"Cluster #{idx}"
@@ -706,20 +708,24 @@ if st.sidebar.button("Run analysis"):
                     plt.tight_layout()
                     st.pyplot(fig_timeline)
                     st.session_state["fig_timeline"] = fig_timeline
-                    st.session_state["timeline_data"] = timeline_data  # <--- ADD THIS LINE
+                    st.session_state["timeline_data"] = timeline_data
                     st.dataframe(slices_df)
 
                     # 3. Thematic Cluster Analysis & Mapping
                     st.markdown("### 🎨 3. Thematic Cluster Analysis & Inter-Research Front Mapping")
                     st.dataframe(pd.DataFrame(cluster_summary_data))
 
-                    fig_cluster, ax_cluster = plt.subplots(figsize=(11, 8), dpi=300)
+                    # EXTENDED WIDE LAYOUT FOR 10 CLUSTERS
+                    fig_cluster, ax_cluster = plt.subplots(figsize=(14, 10), dpi=300)
                     CG = nx.Graph()
-                    cluster_colors = ["#2563EB", "#10B981", "#F59E0B", "#EF4444", "#8B5CF6", "#EC4899"]
+                    # EXTENDED COLOR PALETTE FOR UP TO 10 CLUSTERS
+                    cluster_colors = ["#2563EB", "#10B981", "#F59E0B", "#EF4444", "#8B5CF6", "#EC4899", "#06B6D4", "#F97316", "#14B8A6", "#6366F1"]
                     clusters_meta = []
                     for idx, item in enumerate(cluster_summary_data):
                         c_name = item["LLR Label"]
-                        clusters_meta.append((f"{c_name}\n(Cluster #{idx})", 30 + (idx * 5), cluster_colors[idx % len(cluster_colors)]))
+                        # Scale bubble size dynamically based on actual cluster size
+                        base_size = 30 + (item["Size"] * 2)
+                        clusters_meta.append((f"{c_name}\n(Cluster #{idx})", base_size, cluster_colors[idx % len(cluster_colors)]))
                     st.session_state["dynamic_clusters"] = clusters_meta
 
                     for name, size, color in clusters_meta:
@@ -728,7 +734,8 @@ if st.sidebar.button("Run analysis"):
                         for j in range(i + 1, len(clusters_meta)):
                             CG.add_edge(clusters_meta[i][0], clusters_meta[j][0], weight=5 - (j - i))
 
-                    pos_c = nx.spring_layout(CG, seed=42, k=0.9)
+                    # Increased k-spacing to prevent overlapping of larger cluster maps
+                    pos_c = nx.spring_layout(CG, seed=42, k=1.2)
                     node_colors = [CG.nodes[n]["color"] for n in CG.nodes]
                     node_sizes = [CG.nodes[n]["size"] * 120 for n in CG.nodes]
                     nx.draw_networkx_nodes(CG, pos_c, node_size=node_sizes, node_color=node_colors, alpha=0.9, ax=ax_cluster)
