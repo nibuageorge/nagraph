@@ -77,7 +77,7 @@ try:
             use_container_width=True,
         )                                                          # ← closes download_button
 except FileNotFoundError:
-    st.sidebar.warning("`nagraph user manual.docx` not found in directory."))   # ← EXTRA ')'
+    st.sidebar.warning("`nagraph user manual.docx` not found in directory.")   # ← EXTRA ')'
 
 st.sidebar.markdown("---")
 
