@@ -1373,14 +1373,14 @@ st.markdown("---")
 
 st.markdown(
     """
-    <div style='text-align: center; color: #475569; font-size: 14px; padding: 20px; background-color: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0;'>
-        <h4 style='color: #1E293B; margin-bottom: 10px;'>🎓 How to Cite NAGraph</h4>
-        <p style='margin-bottom: 15px;'>If you use this software in your research, please cite it to support the project.</p>
-        <p style='font-family: monospace; background-color: #FFFFFF; padding: 10px; border-radius: 4px; display: inline-block; border: 1px solid #CBD5E1; color: #0F172A;'>
-            George, N. A. (2026). <i>NAGraph: Scientometric & Network Analysis Suite</i> (Version 1.0) [Computer software]. https://github.com/nibugeorge/nagraph
-        </p>
-        <div style='margin-top: 15px; font-size: 12px; color: #64748B;'>
-            Licensed under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' style='color: #2563EB; text-decoration: none; font-weight: bold;'>CC BY 4.0</a> &nbsp;|&nbsp; 
+    <div style='text-align: center; color: #CBD5E1; font-size: 12px; padding: 8px; background-color: #1E293B; border-radius: 8px; border: 1px solid #334155;'>
+        <div style='color: #F8FAFC; font-weight: bold; margin-bottom: 5px;'>🎓 How to Cite NAGraph</div>
+        <div style='margin-bottom: 8px; color: #94A3B8;'>If you use this software in your research, please cite it.</div>
+        <div style='font-family: monospace; background-color: #0F172A; padding: 6px; border-radius: 4px; display: inline-block; border: 1px solid #475569; color: #F8FAFC;'>
+            George, N. A. (2026). <i>NAGraph: Scientometric & Network Analysis Suite</i> (Version 1.0) [Computer software]. Baselius College Kottayam. https://github.com/nibugeorge/nagraph
+        </div>
+        <div style='margin-top: 8px; font-size: 10px; color: #94A3B8;'>
+            Licensed under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' style='color: #60A5FA; text-decoration: none; font-weight: bold;'>CC BY 4.0</a> &nbsp;|&nbsp; 
             Copyright &copy; 2026 Dr. Nibu A. George
         </div>
     </div>
