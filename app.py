@@ -1367,3 +1367,23 @@ if "scored_works" in st.session_state and st.session_state["scored_works"]:
             file_name="NAGraph - Network Analysis Report.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
         )
+
+# ================= MAIN PAGE FOOTER: CITATION & LICENSE =================
+st.markdown("---")
+
+st.markdown(
+    """
+    <div style='text-align: center; color: #475569; font-size: 14px; padding: 20px; background-color: #F8FAFC; border-radius: 8px; border: 1px solid #E2E8F0;'>
+        <h4 style='color: #1E293B; margin-bottom: 10px;'>🎓 How to Cite NAGraph</h4>
+        <p style='margin-bottom: 15px;'>If you use this software in your research, please cite it to support the project.</p>
+        <p style='font-family: monospace; background-color: #FFFFFF; padding: 10px; border-radius: 4px; display: inline-block; border: 1px solid #CBD5E1; color: #0F172A;'>
+            George, N. A. (2026). <i>NAGraph: Scientometric & Network Analysis Suite</i> (Version 1.0) [Computer software]. Baselius College Kottayam. https://github.com/nibugeorge/nagraph
+        </p>
+        <div style='margin-top: 15px; font-size: 12px; color: #64748B;'>
+            Licensed under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' style='color: #2563EB; text-decoration: none; font-weight: bold;'>CC BY 4.0</a> &nbsp;|&nbsp; 
+            Copyright &copy; 2026 Dr. Nibu A. George
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
