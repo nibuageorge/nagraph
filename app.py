@@ -1377,7 +1377,7 @@ st.markdown(
         <div style='color: #F8FAFC; font-weight: bold; margin-bottom: 5px;'>🎓 How to Cite NAGraph</div>
         <div style='margin-bottom: 8px; color: #94A3B8;'>If you use this software in your research, please cite it.</div>
         <div style='font-family: monospace; background-color: #0F172A; padding: 6px; border-radius: 4px; display: inline-block; border: 1px solid #475569; color: #F8FAFC;'>
-            George, N. A. (2026). <i>NAGraph: Scientometric & Network Analysis Suite</i> (Version 1.0) [Computer software]. Baselius College Kottayam. https://github.com/nibugeorge/nagraph
+            George, N. A. (2026). <i>NAGraph: Scientometric & Network Analysis Suite</i> (Version 1.0) [Computer software]. https://github.com/nibugeorge/nagraph
         </div>
         <div style='margin-top: 8px; font-size: 10px; color: #94A3B8;'>
             Licensed under <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' style='color: #60A5FA; text-decoration: none; font-weight: bold;'>CC BY 4.0</a> &nbsp;|&nbsp; 
