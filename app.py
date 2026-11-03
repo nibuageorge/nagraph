@@ -1321,7 +1321,42 @@ if "scored_works" in st.session_state and st.session_state["scored_works"]:
             nrow[3].text = str(work.get("cited_by_count", 0))
             nrow[4].text = str(score)
             nrow[5].text = role
-
+        # --- FINAL SECTION: LICENSE & CITATION ---
+        doc.add_page_break()
+        doc.add_heading("License & Citation", level=2)
+        
+        doc.add_heading("License", level=3)
+        doc.add_paragraph(
+            "NAGraph: Scientometric & Network Analysis Suite\n"
+            "Copyright (c) 2026 Dr. Nibu A. George, Baselius College Kottayam (Autonomous).\n\n"
+            "This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).\n\n"
+            "You are free to:\n"
+            "  - Share: copy and redistribute the material in any medium or format\n"
+            "  - Adapt: remix, transform, and build upon the material for any purpose, even commercially.\n\n"
+            "Under the following terms:\n"
+            "  - Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\n\n"
+            "To view a copy of this license, visit: https://creativecommons.org/licenses/by/4.0/legalcode"
+        )
+        
+        doc.add_heading("How to Cite NAGraph", level=3)
+        doc.add_paragraph(
+            "If you use NAGraph in your research, please cite it to support the project. "
+            "Please use the following format (APA Style):"
+        )
+        
+        citation_text = (
+            "George, N. A. (2026). NAGraph: Scientometric & Network Analysis Suite "
+            "(Version 1.0) [Computer software]. Baselius College Kottayam. "
+            "https://github.com/nibugeorge/nagraph"
+        )
+        p = doc.add_paragraph()
+        p.paragraph_format.left_indent = docx.shared.Inches(0.5)
+        run = p.add_run(citation_text)
+        run.italic = True
+        
+        doc.add_paragraph(
+            "BibTeX format is also available on the GitHub repository page under the 'Cite this repository' button."
+        )
         doc_io = io.BytesIO()
         doc.save(doc_io)
         doc_io.seek(0)
