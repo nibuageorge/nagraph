@@ -659,7 +659,7 @@ if os.path.exists("nagraph_logo.png"):
 st.sidebar.markdown("---")
 st.sidebar.markdown(
     "Developed by:<br>**Dr. Nibu A. George,**<br>Associate Professor of Physics,<br>"
-    "(IQAC Coordinator),<br>Baselius College Kottayam, (Autonomous).",
+    "<br>Baselius College Kottayam, (Autonomous).",
     unsafe_allow_html=True,
 )
 
