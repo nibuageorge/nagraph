@@ -658,9 +658,18 @@ if os.path.exists("nagraph_logo.png"):
     st.sidebar.image("nagraph_logo.png", use_container_width=True)
 st.sidebar.markdown("---")
 st.sidebar.markdown(
-    "Developed by:<br>**Dr. Nibu A. George,**<br>Associate Professor of Physics,<br>"
-    "Baselius College Kottayam, (Autonomous).<br> (An initiative of IQAC)",
-    unsafe_allow_html=True,
+"""
+        <div style="font-size: 0.85rem; line-height: 1.45; color: #4a5568; padding-top: 4px;">
+            <div style="font-weight: 600; color: #1a202c; margin-bottom: 4px;">Developed by:</div>
+            <div><strong>Dr. Nibu A. George</strong></div>
+            <div>Associate Professor of Physics</div>
+            <div>Baselius College, Kottayam (Autonomous)</div>
+            <div style="margin-top: 6px; font-style: italic; color: #2b6cb0;">
+                (An initiative of IQAC)
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
 )
 
 st.sidebar.markdown("---")
