@@ -659,14 +659,14 @@ if os.path.exists("nagraph_logo.png"):
 st.sidebar.markdown("---")
 st.sidebar.markdown(
 """
-        <div style="font-size: 0.85rem; line-height: 1.45; color: #4a5568; padding-top: 4px;">
-            <div style="font-weight: 600; color: #1a202c; margin-bottom: 4px;">Developed by:</div>
-            <div><strong>Dr. Nibu A. George</strong></div>
-            <div>Associate Professor of Physics</div>
-            <div>Baselius College, Kottayam (Autonomous)</div>
-            <div style="margin-top: 6px; font-style: italic; color: #2b6cb0;">
+        <div style="font-size: 0.85rem; line-height: 1.5; color: #ffffff; padding-top: 4px;">
+            <p style="font-weight: 700; color: #ffffff; margin: 0 0 4px 0;">Developed by:</p>
+            <p style="margin: 0; color: #ffffff;"><strong>Dr. Nibu A. George,</strong></p>
+            <p style="margin: 0; color: #ffffff;">Associate Professor of Physics,</p>
+            <p style="margin: 0; color: #ffffff;">Baselius College Kottayam, (Autonomous).</p>
+            <p style="margin: 6px 0 0 0; font-style: italic; color: #ffffff;">
                 (An initiative of IQAC)
-            </div>
+            </p>
         </div>
         """,
         unsafe_allow_html=True,
